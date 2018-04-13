@@ -1,0 +1,153 @@
+.circle {
+  height: 580px;
+  width: 580px;
+  background-color: grey;
+  border-radius: 100%;
+  margin: 5% auto;
+  z-index: 1;
+  position: relative;
+}
+
+.quarter {
+  height: 250px;
+  width: 250px;
+}
+
+.top-left {
+  border-top-left-radius: 250px;
+  background-color: darkgreen;
+  float: left;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.top-right {
+  border-top-right-radius: 250px;
+  background-color: darkred;
+  float: right;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+.bottom-left {
+  border-bottom-left-radius: 250px;
+  background-color: #c1c103;
+  float: left;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.bottom-right {
+  border-bottom-right-radius: 250px;
+  background-color: darkblue;
+  float: right;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+.top-left:active {
+  border-top-left-radius: 250px;
+  background-color: green;
+  box-shadow: 0px 0px 32px 0px white;
+  float: left;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.top-right:active {
+  border-top-right-radius: 250px;
+  background-color: red;
+  box-shadow: 0px 0px 32px 0px white;
+  float: right;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+.bottom-left:active {
+  border-bottom-left-radius: 250px;
+  background-color: yellow;
+  box-shadow: 0px 0px 32px 0px white;
+  float: left;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.bottom-right:active {
+  border-bottom-right-radius: 250px;
+  background-color: blue;
+  box-shadow: 0px 0px 32px 0px white;
+  float: right;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+
+.top-right-glow {
+  background-color: red;
+  box-shadow: 0px 0px 32px 0px white;
+}
+
+.bottom-right-glow {
+  background-color: blue;
+  box-shadow: 0px 0px 32px 0px white;
+}
+
+.bottom-left-glow {
+  background-color: yellow;
+  box-shadow: 0px 0px 32px 0px white;
+}
+
+.top-left-glow {
+  background-color: green;
+  box-shadow: 0px 0px 32px 0px white;
+}
+
+.middle {
+  height: 280px;
+  width: 280px;
+  border-radius: 100%;
+  background-color: white;
+  border: 15px solid grey;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  margin-left: -140px;
+  margin-top: -140px;
+}
+
+.middle h2 {
+  font-family: 'Teko', sans-serif;;
+  font-weight: 700;
+  text-align: center;
+  font-size: 80px;
+  margin-top: 60px;
+}
+
+.btn, .btn-success {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  padding: 0;
+  z-index: 3;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+
+.counter {
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 48px;
+  width: 48px;
+  margin-left: 40px;
+  z-index: 3;
+}
+.counter p {
+  font-family: 'Teko', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0 auto;
+  padding-top: 4px;
+}
