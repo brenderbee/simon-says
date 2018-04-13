@@ -30,22 +30,22 @@ function random() {
 function light(number) {
   if (number === 0) {
     sndTopRight.play();
-    setTimeout(function(){sndTopRight.pause()}, 550);
+    setTimeout(function(){sndTopRight.pause()}, 500);
     $(".top-right").addClass("top-right-glow");
     setTimeout(function(){$(".top-right").removeClass("top-right-glow")}, 500);
   } else if (number === 1) {
     sndBottomRight.play();
-    setTimeout(function(){sndBottomRight.pause()}, 550);
+    setTimeout(function(){sndBottomRight.pause()}, 500);
     $(".bottom-right").addClass("bottom-right-glow");
     setTimeout(function(){$(".bottom-right").removeClass("bottom-right-glow")}, 500);
   } else if (number === 2) {
     sndBottomLeft.play();
-    setTimeout(function(){sndBottomLeft.pause()}, 550);
+    setTimeout(function(){sndBottomLeft.pause()}, 500);
     $(".bottom-left").addClass("bottom-left-glow");
     setTimeout(function(){$(".bottom-left").removeClass("bottom-left-glow")}, 500);
   } else {
     sndTopLeft.play();
-    setTimeout(function(){sndTopLeft.pause()}, 550);
+    setTimeout(function(){sndTopLeft.pause()}, 500);
     $(".top-left").addClass("top-left-glow");
     setTimeout(function(){$(".top-left").removeClass("top-left-glow")}, 500);
   }
@@ -53,7 +53,7 @@ function light(number) {
 
 function replay(array) {
   array.forEach(function(item, index) {
-    var startTime = (index + 1) * 1000;
+    var startTime = (index + 1) * 800;
     setTimeout(function(){light(item)}, startTime);
   });
 }
@@ -90,7 +90,7 @@ $(document).ready(function() {
 
   $(".top-right").click(function(){
     sndTopRight.play();
-    setTimeout(function(){sndTopRight.pause()}, 550);
+    setTimeout(function(){sndTopRight.pause()}, 500);
     if (simon.counts[click] === 0 && click < simon.counts.length - 1) {
       click += 1;
     } else if (simon.counts[click] === 0 && click === simon.counts.length - 1) {
@@ -104,7 +104,7 @@ $(document).ready(function() {
 
   $(".bottom-right").click(function(){
     sndBottomRight.play();
-    setTimeout(function(){sndBottomRight.pause()}, 550);
+    setTimeout(function(){sndBottomRight.pause()}, 500);
     if (simon.counts[click] === 1 && click < simon.counts.length - 1) {
       click += 1;
     } else if (simon.counts[click] === 1 && click === simon.counts.length - 1) {
@@ -118,7 +118,7 @@ $(document).ready(function() {
 
   $(".bottom-left").click(function(){
     sndBottomLeft.play();
-    setTimeout(function(){sndBottomLeft.pause()}, 550);
+    setTimeout(function(){sndBottomLeft.pause()}, 500);
     if (simon.counts[click] === 2 && click < simon.counts.length - 1) {
       click += 1;
     } else if (simon.counts[click] === 2 && click === simon.counts.length - 1) {
@@ -132,7 +132,7 @@ $(document).ready(function() {
 
   $(".top-left").click(function(){
     sndTopLeft.play();
-    setTimeout(function(){sndTopLeft.pause()}, 550);
+    setTimeout(function(){sndTopLeft.pause()}, 500);
     if (simon.counts[click] === 3 && click < simon.counts.length - 1) {
       click += 1;
     } else if (simon.counts[click] === 3 && click === simon.counts.length - 1) {
