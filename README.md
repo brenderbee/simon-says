@@ -44,7 +44,7 @@ A website created with CSS, Javascript, and HTML where a user can play Simon Say
 1. Clone this repository.
 2. Open index.html in browser to view site.
 3. Edit associated files in preferred text editor.
-4. View gh-pages: https://brenderbee.gitbug.io/simon-says
+4. View gh-pages: https://brenderbee.github.io/simon-says
 
 ## Known Bugs
 * Click event are not disabled during Simon's turn.
