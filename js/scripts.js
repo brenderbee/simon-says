@@ -35,34 +35,6 @@ Quarter.prototype.playSound = function () {
   setTimeout(function(){this.sound.pause()}, 500);
 };
 
-
-
-function light(number) {
-  var quarters = [topRight, bottomRight, bottomLeft, topLeft];
-
-  if (number === 0) {
-    sndTopRight.play();
-    setTimeout(function(){sndTopRight.pause()}, 500);
-    $(".top-right").addClass("top-right-glow");
-    setTimeout(function(){$(".top-right").removeClass("top-right-glow")}, 500);
-  } else if (number === 1) {
-    sndBottomRight.play();
-    setTimeout(function(){sndBottomRight.pause()}, 500);
-    $(".bottom-right").addClass("bottom-right-glow");
-    setTimeout(function(){$(".bottom-right").removeClass("bottom-right-glow")}, 500);
-  } else if (number === 2) {
-    sndBottomLeft.play();
-    setTimeout(function(){sndBottomLeft.pause()}, 500);
-    $(".bottom-left").addClass("bottom-left-glow");
-    setTimeout(function(){$(".bottom-left").removeClass("bottom-left-glow")}, 500);
-  } else {
-    sndTopLeft.play();
-    setTimeout(function(){sndTopLeft.pause()}, 500);
-    $(".top-left").addClass("top-left-glow");
-    setTimeout(function(){$(".top-left").removeClass("top-left-glow")}, 500);
-  }
-}
-
 function light(number) {
   var quarters = [topRight, bottomRight, bottomLeft, topLeft];
   quarters.forEach(function(quarter) {
@@ -99,6 +71,10 @@ function simonTurn() {
   click = 0;
   simon.counts.push(random());
   counter += 1
+  if (counter === 21) {
+    resetGame();
+    return console.log("YOU WIN!");
+  }
   $(".counter p").text(counter);
   replay(simon.counts);
 }
