@@ -106,10 +106,12 @@ $(document).ready(function() {
     $(".counter p").text(counter);
     $(".start").hide();
   });
-
-  $(".top-right").click(function(){
+  $(".top-right").on( "click", function() {
     playerTurn(sndTopRight, 0);
   });
+  // $(".top-right").click(function(){
+  //   playerTurn(sndTopRight, 0);
+  // });
 
   $(".bottom-right").click(function(){
     playerTurn(sndBottomRight, 1);
