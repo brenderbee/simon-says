@@ -48,6 +48,7 @@ A website created with CSS, Javascript, and HTML where a user can play Simon Say
 
 ## Known Bugs
 * Click event are not disabled during Simon's turn.
+* Program does not run properly on mobile. Sounds misfire and classes aren't changed on tap events.
 
 ## Technologies Used
   * HTML
