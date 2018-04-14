@@ -106,22 +106,20 @@ $(document).ready(function() {
     $(".counter p").text(counter);
     $(".start").hide();
   });
-  $(".top-right").on( "click", function() {
+  
+  $(".top-right").on("click", function() {
     playerTurn(sndTopRight, 0);
   });
-  // $(".top-right").click(function(){
-  //   playerTurn(sndTopRight, 0);
-  // });
 
-  $(".bottom-right").click(function(){
+  $(".bottom-right").on("click", function() {
     playerTurn(sndBottomRight, 1);
   });
 
-  $(".bottom-left").click(function(){
+  $(".bottom-left").on("click", function() {
     playerTurn(sndBottomLeft, 2);
   });
 
-  $(".top-left").click(function(){
+  $(".top-left").on("click", function() {
     playerTurn(sndTopLeft, 3);
   });
 });
