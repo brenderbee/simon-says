@@ -1,3 +1,4 @@
+// Business Logic
 var counter = 0;
 var click = 0;
 
@@ -20,6 +21,11 @@ var sndBottomRight = new Audio("sound/300.wav");
 var sndBottomLeft = new Audio("sound/400.wav");
 var sndTopLeft = new Audio("sound/500.wav");
 
+var topRight = new Quarter(0, sndTopRight, "top-right");
+var bottomRight = new Quarter(1, sndBottomRight, "bottom-right");
+var bottomLeft = new Quarter(2, sndBottomLeft, "bottom-left");
+var topLeft = new Quarter(3, sndTopLeft, "top-left");
+
 Player.prototype.clearFields = function () {
   this.counts = [];
 };
@@ -29,7 +35,11 @@ Quarter.prototype.playSound = function () {
   setTimeout(function(){this.sound.pause()}, 500);
 };
 
+
+
 function light(number) {
+  var quarters = [topRight, bottomRight, bottomLeft, topLeft];
+
   if (number === 0) {
     sndTopRight.play();
     setTimeout(function(){sndTopRight.pause()}, 500);
@@ -53,6 +63,18 @@ function light(number) {
   }
 }
 
+function light(number) {
+  var quarters = [topRight, bottomRight, bottomLeft, topLeft];
+  quarters.forEach(function(quarter) {
+    if (number === quarter.value) {
+      quarter.sound.play();
+      setTimeout(function(){quarter.sound.pause()}, 500);
+      $("." + quarter.name).addClass(quarter.name + "-glow");
+      setTimeout(function(){$("." + quarter.name).removeClass(quarter.name + "-glow")}, 500);
+    }
+  });
+}
+
 function replay(array) {
   array.forEach(function(item, index) {
     var startTime = (index + 1) * 800;
@@ -64,8 +86,6 @@ function random() {
   var randomNumber = (Math.floor(Math.random()*4));
   return randomNumber;
 }
-
-
 
 function resetGame() {
   counter = 0;
@@ -97,7 +117,7 @@ function playerTurn(sound, number) {
   }
 }
 
-
+// User-Interface Logic
 $(document).ready(function() {
   $(".start").click(function(event){
     event.preventDefault();
