@@ -72,8 +72,8 @@ function simonTurn() {
   simon.counts.push(random());
   counter += 1
   if (counter === 21) {
+    setTimeout(function(){$("#win").modal("toggle")}, 300);
     resetGame();
-    return console.log("YOU WIN!");
   }
   $(".counter p").text(counter);
   replay(simon.counts);
@@ -89,6 +89,7 @@ function playerTurn(sound, number) {
   } else {
     sndLose.play();
     setTimeout(function(){sndLose.pause()}, 300);
+    setTimeout(function(){$("#lose").modal("toggle")}, 700);
     return resetGame();
   }
 }
@@ -106,7 +107,7 @@ $(document).ready(function() {
     $(".counter p").text(counter);
     $(".start").hide();
   });
-  
+
   $(".top-right").on("click", function() {
     playerTurn(sndTopRight, 0);
   });

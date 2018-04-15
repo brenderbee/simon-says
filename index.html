@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Teko:300,700" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <title>Simon</title>
   </head>
@@ -23,9 +24,31 @@
       <div class="middle">
         <h2>Simon</h2>
         <div class="counter">
-          <p></p>
+          <p>0</p>
         </div>
         <button type="submit" class="btn btn-success start">PLAY</button>
+      </div>
+    </div>
+    <div class="modal fade" id="win" role="dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4 class="modal-title">You win!</h4>
+        </div>
+        <div class="modal-body">
+          <p>You completed 20 rounds with Simon!</p>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="lose" role="dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4 class="modal-title">Oops!</h4>
+        </div>
+        <div class="modal-body">
+          <p>Try again!</p>
+        </div>
       </div>
     </div>
   </body>

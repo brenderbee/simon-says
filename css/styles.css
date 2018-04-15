@@ -141,7 +141,7 @@
   text-align: center;
   height: 48px;
   width: 48px;
-  margin-left: 40px;
+  margin-left: 50px;
   z-index: 3;
 }
 .counter p {
@@ -150,4 +150,9 @@
   font-weight: 300;
   margin: 0 auto;
   padding-top: 4px;
+}
+
+.modal {
+  width: 30%;
+  margin: 5% auto;
 }
